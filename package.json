@@ -1,0 +1,27 @@
+{
+  "name": "trabalho_web",
+  "version": "1.0.0",
+  "description": "Trabalho de Web - Sistema de cadastro com CRUD",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalopss/cadastro_crud.git"
+  },
+  "author": "Matheus Ritton, Leandro Marassi e Felipe Wilpert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalopss/cadastro_crud/issues"
+  },
+  "homepage": "https://github.com/kalopss/cadastro_crud#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7"
+  }
+}
