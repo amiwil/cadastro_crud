@@ -11,20 +11,23 @@
 
 	- Validar os campos CPF, email, senha e confirmação de senha
 	- Definir um tamanho mínimo para o nome do usuário
-	- Data de nascimento
-	- Validar telefone com DDD. No banco de dados foi definido que o valor máximo são 13 caracteres: (Codigo)DDD Numero
+	- Validar telefone com DDD. No banco de dados foi definido que o valor máximo são 14 caracteres: (Codigo)DDD Numero
 	- Validações de campos e mensagens de erros
 	-->
 	<form id="signup" action="/signup/save" method="post">
-		<input type="text" id="nome" name="nome" placeholder="Nome do Usuário" />
+		<input type="text" id="nome" name="nome" placeholder="Primeiro Nome" />
 		<br />
         <input type="text" id="email" name="email" placeholder="Email" />
+		<br />
+		<input type="date" id="idade" name="idade" placeholder="Data de Nascimento" />
 		<br />
         <input type="text" id="cpf" name="cpf" placeholder="CPF" />
 		<br />
 		<input type="tel" id="telefone" name="telefone" placeholder="Telefone" />
 		<br />
         <input type="text" id="senha" name="senha" placeholder="Senha do Usuário" />
+		<br />
+		<input type="text" id="confirma" placeholder="Confirme a sua senha" />
 		<br />
 		<input type="submit" value="Enviar" />
 		<br>

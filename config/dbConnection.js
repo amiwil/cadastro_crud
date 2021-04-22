@@ -6,8 +6,8 @@ var connMySQL = function(){
     console.log('Conexao estabelecida')
     return connection = mysql.createConnection({
         host: 'localhost',
-        user: 'root',
-        password: '',
+        user: 'kalopss',
+        password: 'StRKalopss98',
         database: 'web1'
     });
 }

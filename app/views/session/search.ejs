@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <title>Faça uma busca</title>
+</head>
+<body>
+    <h1>Faça uma busca no banco de dados</h1>
+
+    <!-- O que falta fazer? 
+    Retornar uma mensagem de erro, caso não encontre um usuario
+    Formatar a data para DD/MM/YYYY-->
+
+    <form action="/search/confirm" method="POST">
+        <input type="text" id="nome" name="nome" placeholder="Digite um nome...">
+        <br />
+        <input type="submit" value="Enviar" />
+
+    </form>
+
+    <% if (typeof(usuarios) != "undefined") { %>
+
+        <% for(usuario of usuarios) { %>
+
+            <p><%= usuario.nome %></p>
+            <p><%= usuario.email %></p>
+            <p><%= usuario.idade %></p>
+
+        <% } %>
+
+    <% } %>
+
+</body>
+</html>
