@@ -9,6 +9,6 @@ module.exports.save_user = function(app, req, res) {
     var dataModel = new app.app.models.AccessDAO(connection);
     
     dataModel.addUser(user, function(error, result){
-        res.redirect('/home');
+        res.redirect('/');
     });
 }
