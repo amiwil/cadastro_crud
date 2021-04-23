@@ -10,6 +10,10 @@ AccessDAO.prototype.addUser = function(user, callback){ //Função responsável 
     this._connection.query('INSERT INTO usuario SET ?', user, callback);
 }
 
+AccessDAO.prototype.auth = function(user, pass, callback) { //Função que busca por um usuario com credenciais específicas
+    this._connection.query('SELECT * FROM usuario WHERE usuario.email = ? AND usuario.senha = ?', [user, pass],callback);
+}
+
 module.exports = function(){
     return AccessDAO;
 }
