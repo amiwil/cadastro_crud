@@ -1,5 +1,11 @@
 module.exports.search_page = function(app, req, res) {
-    res.render('session/search');
+
+    if(req.session.auth_pass) { //Caso o usuario seja validado...
+        res.render('session/search');
+    
+    } else {
+        res.send('Credenciais inválidas! Faça login!')
+    }
 }
 
 module.exports.show_results = function(app, req, res) {

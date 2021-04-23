@@ -11,12 +11,14 @@ module.exports.auth_user = function(app, req, res) {
 
     dataModel.auth(user, pass, function(error, result) {
         
-        if (result[0] != undefined) {
-            req.session.auth_pass = true;
-            
+        if (result[0] != undefined) { //Caso a busca retorne um resultado que não seja indefinido
+            req.session.auth_pass = true; //Cria uma sessao valida
+
+            req.session.name = result[0].nome; //Variavel de sessao, responsavel por resgatar o nome do usuario
+            req.session.email = result[0].email;
         }
 
-        if (req.session.auth_pass) {
+        if (req.session.auth_pass) { //Caso a sessao seja valida, segue para a proxima pagina
             res.render('session/search')
         
         } else {
